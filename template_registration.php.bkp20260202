@@ -1,0 +1,39 @@
+<?php
+/**
+ * Template name: Register
+ *
+ * This is the template that displays all pages by default.
+ * Please note that this is the WordPress construct of pages and that
+ * other "pages" on your WordPress site will use a different template.
+ *
+ * @package WordPress
+ * @subpackage Twenty_Sixteen
+ * @since Twenty Sixteen 1.0
+ */
+
+get_header(); ?>
+
+<?php include( 'second_header.php' ); ?>
+
+<div class="page_content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+              <div class="login_tabs_section on_register">
+              		<a class="login_tabs " href="<?php echo bloginfo('url'); ?>/my-account">
+              				Login
+              		</a>
+              		<div class="login_tabs active_tab">
+              				Register
+              		</div>
+              </div>
+
+              <?php while ( have_posts() ) : the_post(); the_content(); endwhile; ?>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php get_footer(); ?>
